@@ -25,15 +25,29 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $cats_195 = Producto::all()->where('categoria','195g');
+        $cats_195 = Producto::all()->where('categoria','Papeleria');
+        $cats_360 = Producto::all()->where('categoria','Regalos');
 
         if( Auth::check() ){
             $user_id = auth()->user()->id;
             $cart = Cart::all()->where('user_id',$user_id)->count();
-            return view('home', compact('cats_195','cart'));
+            return view('home', compact('cats_195','cats_360','cart'));
         }
-        return view('home', compact('cats_195'));
+        return view('home', compact('cats_195','cats_360'));
     }
+
+    // public function index()
+    // {
+    //     $cats_195 = Producto::all()->where('categoria','Papeleria');
+
+    //     if( Auth::check() ){
+    //         $user_id = auth()->user()->id;
+    //         $cart = Cart::all()->where('user_id',$user_id)->count();
+    //         return view('home', compact('cats_195','cart'));
+    //     }
+    //     return view('home', compact('cats_195'));
+    // }
+
     public function vendedorHome()
     {
         return view('vendedor.home');

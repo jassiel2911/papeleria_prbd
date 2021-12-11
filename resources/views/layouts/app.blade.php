@@ -34,16 +34,13 @@
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item navbar-brand">
                             <a href="">
-                                <img src="img/logo.png" alt="">
+                                <img src="images/logo.png" alt="" width="80">
                             </a>
                         </li>
                     </ul>
                     <ul class="d-flex list-unstyled" style="--bs-scroll-height: 100px;">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{route('home')}}">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="productos.html">Productos</a>
                         </li>
                         
                         @guest
@@ -66,7 +63,7 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="#">Perfil</a></li>
-                                    <!-- <li><a class="dropdown-item" href="#">Cerrar sesión</a></li> -->
+
                                     <li><a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

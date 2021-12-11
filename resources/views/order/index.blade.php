@@ -3,7 +3,7 @@
 @section('content')
 <section class="home-cursos container my-5">
 			<div class="admin-users_title">
-				<h2 class="text-center">Tu orden de compra</h2>
+				<h2 class="text-center">Factura</h2>
 			</div>
 			<div class="row">
 				<div class="col-6">
@@ -13,14 +13,14 @@
 					    <tr>
 					      <th scope="col">Producto</th>
 					      <th scope="col">Cantidad</th>
-					      <th scope="col">Subotal</th>
+					      <th scope="col">Subtotal</th>
 					    </tr>
 					  </thead>
 					  <tbody>
                         @foreach($duplicados as $duplicado)
                             @if($duplicado->carts_count> 0)
                                 <tr>
-                                <td><img src="img/195-1.jpg" alt="">Crema de avellana</td>
+                                <td><img src="img/195-1.jpg" alt="">{{$duplicado->nombre}}</td>
                                 <td>{{$duplicado->carts_count}}</td>
                                 <td>{{$duplicado->carts_count * $duplicado->precio}}</td>
                                 <p class="d-none">{{$subtotal=$duplicado->carts_count * $duplicado->precio}}</p>
@@ -29,9 +29,9 @@
                             @endif
                         @endforeach
 					  </tbody>
-
 					</table>
-					<h3>Total:{{$total}}</h3><br>	
+
+					<h3>Total: {{$total}}</h3><br>	
 					<form action="	">
 						<input type="text" placeholder="Código de descuento">
 						<input type="submit" value="Usar">
@@ -39,9 +39,7 @@
 				</div>
 				<div class="col-6">
 					<br>	
-					<h4>Información del contacto</h4><br>	
-					<!-- <h5>Dirección:</h5>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.	</p> -->
+					<h4>Información del contacto</h4><br>
 
 					<form action="{{route('order.store')}}" method="POST">
                     @csrf

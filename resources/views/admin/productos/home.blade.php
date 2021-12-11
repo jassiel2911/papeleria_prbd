@@ -3,29 +3,6 @@
 @section('content')
 
 <x-nav-admin/>
-<!-- <section class="container mt-5">
-    <div class="row">
-        <div class="col">
-            <h1 class="display-5 mb-2">Bienvenido, admin</h1>
-        </div>
-        <div class="col">
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="admin-index.html">Usuarios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="admin-productos.html">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="admin-socios.html">Socios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Reporte</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section> -->
 <section class="home-cursos container my-5">
     <div class="admin-users_title">
         <h2 class="text-center">Productos</h2>

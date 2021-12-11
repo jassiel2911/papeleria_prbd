@@ -16,16 +16,15 @@
 				      <th scope="col">Producto</th>
 				      <th scope="col">Precio</th>
 				      <th scope="col">Cantidad</th>
-				      <th scope="col">Subotal</th>
+				      <th scope="col">Subtotal</th>
 				    </tr>
 				  </thead>
 				  <tbody>
-                      <!-- {{$duplicados}} -->
 
                       @foreach($duplicados as $duplicado)
                         @if($duplicado -> carts_count > 0)
                         <tr>
-                            <td><img src="{{asset('img/'.$duplicado->foto)}}" alt="">{{$duplicado->nombre}}</td>
+                            <td><img src="{{asset('images/'.$duplicado->foto)}}" alt="">{{$duplicado->nombre}}</td>
                             <td>{{$duplicado->precio}}</td>
                             <td>
                                 <form action="{{route('cart.update',$duplicado->id)}}" method="POST">
@@ -35,13 +34,6 @@
                                     <input type="number" value="{{$duplicado->carts_count}}" name="cantidad">
                                     <input type="submit" value="Actualizar">
                                 </form>
-                                <!-- <form action="{{route('cart.update',$duplicado->id)}}" method="POST">
-                                    @method('PATCH')
-                                    @csrf
-                                    <input type="hidden" value="{{$duplicado->id}}" name="producto_id">
-                                    <input type="hidden" value="0" name="cantidad">
-                                    <input type="submit" value="Eliminar">
-                                </form> -->
                                 <form action="{{route('cart.destroy',$duplicado->id)}}" method="POST">
                                         @method('DELETE')
                                         @csrf
@@ -59,14 +51,6 @@
                         </tr>
                         @endif
                       @endforeach
-                      <!-- @foreach($items as $item)
-				    <tr>
-				      <td><img src="{{asset('img/.$item->producto->foto')}}" alt="">{{$item->producto->nombre}}</td>
-				      <td>{{$item->producto->precio}}</td>
-				      <td>3</td>
-				      <td>$1600</td>
-				    </tr>
-                    @endforeach -->
 				    <tr>
 				    	<td colspan="2"></td>
 				    	<td >Total</td>

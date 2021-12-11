@@ -22,10 +22,17 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
+        'rfc',
         'name',
+        'ap_paterno',
+        'ap_materno',
         'email',
         'tel',
-        'dir',
+        'calle',
+        'colonia',
+        'numero_calle',
+        'codigo postal',
+        'estado',
         'password',
         'rol'
     ];

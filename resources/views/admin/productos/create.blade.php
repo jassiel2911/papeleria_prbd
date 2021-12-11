@@ -51,10 +51,10 @@
             <div class="col-md-6">
                 <label for="category" class="form-label">Categoria</label>
                 <select class="form-select" aria-label="Default select example" name="categoria">
-                  <option selected>Open this select menu</option>
-                  <option value="195g">195g</option>
-                  <option value="360g">300g</option>
-                  <option value="Kits">Kits</option>
+                  <option selected>Seleccione una opción</option>
+                  <option value="Papeleria">Papeleria</option>
+                  <option value="Regalos">Regalos</option>
+                  <!-- <option value="Kits">Recargas</option> -->
                 </select>
             </div>
             <div class="col-md-6">
