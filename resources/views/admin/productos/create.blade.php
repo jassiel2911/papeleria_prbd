@@ -18,12 +18,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="admin-productos.html">Productos</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="admin-socios.html">Socios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Reporte</a>
-                </li>
             </ul>
         </div>
     </div>

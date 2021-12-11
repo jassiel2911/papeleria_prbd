@@ -62,7 +62,6 @@
                                     {{ Auth::user()->name }}
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Perfil</a></li>
 
                                     <li><a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -79,9 +78,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="{{route('adminuser.index')}}">Panel de administrador</a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="{{route('vendedor.home')}}">Panel de vendedor</a>
-                                </li>
+                                </li> -->
                             @elseif( auth()->user()->role == 1 )
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="{{route('vendedor.home')}}">Panel de vendedor</a>
